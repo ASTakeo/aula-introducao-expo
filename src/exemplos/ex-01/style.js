@@ -7,6 +7,7 @@ const styles = StyleSheet.create({
         padding: 8,
         flex: 1,
         alignItems: 'center',
+        borderRadius: 20,
         // justifyContent: 'space-between',
     },
     titulo: {
