@@ -9,11 +9,17 @@ function Atividade1 (){
             <Text style={styles.texto}>Desenvolvendo Atividade 1</Text>
             <Text style={styles.texto}>react-native com Expo</Text>
             {/* <Text style={styles.texto}>Teste</Text> */}
-            <View>
-                <Text style={styles.titulo}>TEXTO</Text>
+            {/* <View style={styles.container}>
+                <Text style={styles.titulo}>Texto Exemplo</Text>
                 <Text style={styles.texto1}>Complemento</Text>
+            </View> */}
+            <View style={styles.container}>
+                <Text style={styles.titulo1}>Texto Exemplo</Text>
+                <Text style={styles.texto}>Complemento</Text>
             </View>
+
         </View>
+        
     );
 }
 
