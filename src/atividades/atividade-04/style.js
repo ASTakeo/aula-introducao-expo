@@ -28,7 +28,11 @@ const styles = StyleSheet.create({
     texto: {
         fontSize: RFPercentage(2.2),
         color: 'deepskyblue',
-
+    },
+    label: {
+    fontSize: RFPercentage(1.5),
+    color: '#000000',
+    textAlign: 'left', 
     },
     input: {
         borderWidth: RFPercentage(0.2),
