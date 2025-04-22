@@ -30,9 +30,9 @@ const styles = StyleSheet.create({
         color: 'deepskyblue',
     },
     label: {
-    fontSize: RFPercentage(1.5),
-    color: '#000000',
     textAlign: 'left', 
+    width: '100%', 
+    paddingLeft: RFPercentage(1),
     },
     input: {
         borderWidth: RFPercentage(0.2),

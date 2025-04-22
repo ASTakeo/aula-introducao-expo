@@ -9,7 +9,7 @@ function Atividade4 () {
   // State
   const [txtNome, settxtNome] = useState('');
   const [txtSobrenome, settxtSobrenome] = useState('');
-  const [txtExibir, setTxtExibir] = useState('');
+  const [txtExibir, setTxtExibir] = useState('Inserir o Nome e Sobrenome');
   
   // let txtTexto = 'Inserir o Nome e Sobrenome';
   
