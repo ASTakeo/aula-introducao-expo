@@ -15,22 +15,35 @@ export default function Atividade6() {
     const mensErro = 'Valores inseridos de forma incorreta!';
 
     function calculaImc() {
-        const tmpImc = peso / (altura * altura);
+        const pesoNum = parseFloat(peso);
+        const alturaNum = parseFloat(altura);
+
+        if (isNaN(pesoNum) || isNaN(alturaNum) || alturaNum <= 0) {
+            setImc(0);
+            setValida(mensErro);
+            return;
+        }
+
+        const tmpImc = pesoNum / (alturaNum * alturaNum);
         setImc(tmpImc);
         resultadoimc(tmpImc);
     }
     
     function resultadoimc(imc) {
-        switch (imc) {
-                case imc <= 18.5:
-                    return setResultado('Abaixo do Peso')
-                case imc >= 18.5 || imc <= 24.9:
-                    return setResultado('Abaixo do Peso')
-                // case '*':
-                //     return setResultado('Abaixo do Peso')
-                // case '/':
-                //     return setResultado('Abaixo do Peso')
-            
+        if (imc <= 18.5) {
+            setValida('Abaixo do Peso');
+        } else if (imc > 18.5 && imc <= 24.9) {
+            setValida('Peso Normal');
+        } else if (imc >= 25 && imc <= 29.9) {
+            setValida('Sobrepeso');
+        } else if (imc >= 30 && imc <= 34.9) {
+            setValida('Obesidade Grau 1');
+        } else if (imc >= 35 && imc <= 39.9) {
+            setValida('Obesidade Grau 2');   
+        } else if (imc >= 40) {
+            setValida('Obesidade Grau 3');       
+        } else {
+            setValida(mensErro);
         }
     }
 
@@ -42,11 +55,11 @@ export default function Atividade6() {
                 <Input placeholder='Altura' valor={altura} atualizaValor={setAltura} />
             </View>
 
-            <Text style={styles.imc}>{isNaN(imc) ? mensErro : imc.toFixed(2)}</Text>
+            <Text style={styles.imc}>{isNaN(imc) || imc === 0 ? mensErro : imc.toFixed(2)}</Text>
 
-            <Text style={[styles.imc, styles.txtMensagem]}>valida.toFixed(2)</Text>
+            <Text style={[styles.imc, styles.txtMensagem]}>{valida}</Text>
 
             <Botao calcular={calculaImc}>Calcular</Botao>
         </View>
-    )
+    );
 }
