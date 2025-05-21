@@ -10,6 +10,7 @@ import Exemplo3 from './src/exemplos/ex-03';
 import Exemplo4 from './src/exemplos/ex-04';
 import Exemplo5 from './src/exemplos/ex-05';
 import Exemplo6 from './src/exemplos/ex-06';
+import Exemplo7 from './src/exemplos/ex-07';
 
 // Atividades
 import Atividade1 from './src/atividades/atividade-01';
