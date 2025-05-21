@@ -39,7 +39,7 @@ export default function Atividade6() {
         } else if (imc >= 30 && imc <= 34.9) {
             setValida('Obesidade Grau 1');
         } else if (imc >= 35 && imc <= 39.9) {
-            setValida('Obesidade Grau 2');   
+            setValida('Obesidade Grau 2');   É
         } else if (imc >= 40) {
             setValida('Obesidade Grau 3');       
         } else {
